@@ -21,10 +21,23 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── About.astro
+│   │   ├── Contact.astro
+│   │   ├── FAQ.astro
+│   │   ├── Footer.astro
+│   │   ├── Hero.astro
+│   │   ├── Material.astro
+│   │   ├── Projects.astro
+│   │   ├── Services.astro
+│   │   └── Social.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   |── pages/
+│   |   └── index.astro
+|   |
+|   |__ styles/
+|        |__ global.css
 └── package.json
 ```
 

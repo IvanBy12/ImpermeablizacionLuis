@@ -10,7 +10,25 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.12",
-    "astro": "^5.4.2",
-    "tailwindcss": "^4.0.12"
+    "astro": "^5.5.2"
+  },
+  "description": "```sh pnpm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanBy12/ImpermeablizacionLuis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanBy12/ImpermeablizacionLuis/issues"
+  },
+  "homepage": "https://github.com/IvanBy12/ImpermeablizacionLuis#readme",
+  "devDependencies": {
+    "@types/cookie": "^0.6.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
   }
 }

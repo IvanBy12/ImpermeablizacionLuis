@@ -1,0 +1,89 @@
+---
+// src/components/Material.astro
+// Componente para mostrar las marcas de impermeabilizantes
+
+const marcasImpermeabilizantes = [
+  {
+    nombre: "Fester",
+    imagen: './src/assets/festerLogo.png',
+    descripcion: "Líder en soluciones de impermeabilización con más de 65 años de experiencia en el mercado.",
+    productos: [
+      "Acriton - Impermeabilizante acrílico",
+      "FesterSIP - Sistema impermeable prefabricado",
+      "CR-65 - Impermeabilizante cementoso",
+      "Vaportite - Asfalto modificado"
+    ]
+  },
+  {
+    nombre: "Sika",
+    imagen: "./src/assets/sikaLogo.png",
+    descripcion: "Empresa suiza especializada en productos químicos para la construcción e impermeabilización.",
+    productos: [
+      "Sikalastic - Membrana líquida de poliuretano",
+      "SikaFill - Impermeabilizante elástico",
+      "SikaTop - Impermeabilizante cementoso",
+      "Sika-1 - Impermeabilizante integral"
+    ]
+  },
+  {
+    nombre: "Comex",
+    imagen: "./src/assets/comexLogo.png",
+    descripcion: "Marca mexicana con amplia gama de impermeabilizantes de alta calidad.",
+    productos: [
+      "Top Total - Impermeabilizante acrílico",
+      "Top Secado Rápido - Para climas lluviosos",
+      "Sellador Comex - Base para impermeabilizante",
+      "Impercomex - Prefabricado asfáltico"
+    ]
+  },
+  {
+    nombre: "Imperquimia",
+    imagen: "./src/assets/imperquimiaLogo.png",
+    descripcion: "Fabricante especializado en sistemas de impermeabilización y construcción.",
+    productos: [
+      "Elaston - Impermeabilizante elastomérico",
+      "Urelastic - Impermeabilizante de poliuretano",
+      "Aquasil - Impermeabilizante de silicona",
+      "Impercoat - Membranas prefabricadas"
+    ]
+  },{
+    nombre: "Mapei",
+    imagen: "./src/assets/mapeiLogo.png",
+    descripcion: "Compañía italiana con soluciones avanzadas de impermeabilización.",
+    productos: [
+      "Mapelastic - Membrana cementosa flexible",
+      "Aquaflex - Membrana líquida elástica",
+      "Idrosilex - Impermeabilizante por cristalización",
+      "Purtop - Membrana de poliurea"
+    ]
+  }
+];
+---
+
+<section class="material material-section">
+  <div class="material intro">
+    <h2>Las Mejores Marcas de Impermeabilizantes</h2>
+    <p>La impermeabilización es esencial para proteger estructuras contra la humedad y el agua. Contar con los materiales adecuados garantiza durabilidad y eficacia en la protección de superficies. A continuación, presentamos las principales marcas en el mercado y sus productos más destacados.</p>
+  </div>
+  
+  <div class="material brands-container">
+    {marcasImpermeabilizantes.map(marca => (
+      <div class="material brand-card">
+        <div class="material brand-image">
+          <img src={marca.imagen} alt={marca.nombre} />
+        </div>
+        <div class="material brand-info">
+          <h3 class="material brand-name">{marca.nombre}</h3>
+          <p class="material brand-description">{marca.descripcion}</p>
+          <ul class="material product-list">
+            {marca.productos.map(producto => (
+              <li>{producto}</li>
+            ))}
+          </ul>
+          <a href="#" class="cta-button">Ver más detalles</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
