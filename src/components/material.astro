@@ -4,14 +4,14 @@
 
 const marcasImpermeabilizantes = [
   {
-    nombre: "Fester",
-    imagen: './src/assets/festerLogo.png',
-    descripcion: "Líder en soluciones de impermeabilización con más de 65 años de experiencia en el mercado.",
+    nombre: "FiberGlass Colombia",
+    imagen: "./src/assets/fiberglassLogo.png",
+    descripcion: "Líder en Aislamientos térmicos y acústicos e impermeabilización con más de 60 años en el mercado Colombiano.",
     productos: [
-      "Acriton - Impermeabilizante acrílico",
-      "FesterSIP - Sistema impermeable prefabricado",
-      "CR-65 - Impermeabilizante cementoso",
-      "Vaportite - Asfalto modificado"
+      { nombre: "FiberGlass - Membrana asfáltica", url: "#" },
+      { nombre: "FiberGlass - Membrana líquida de poliuretano", url: "#" },
+      { nombre: "FiberGlass - Impermeabilizante acrílico", url: "#" },
+      { nombre: "FiberGlass - Membrana de poliurea", url: "#" }
     ]
   },
   {
@@ -19,48 +19,58 @@ const marcasImpermeabilizantes = [
     imagen: "./src/assets/sikaLogo.png",
     descripcion: "Empresa suiza especializada en productos químicos para la construcción e impermeabilización.",
     productos: [
-      "Sikalastic - Membrana líquida de poliuretano",
-      "SikaFill - Impermeabilizante elástico",
-      "SikaTop - Impermeabilizante cementoso",
-      "Sika-1 - Impermeabilizante integral"
+      { nombre: "Sikalastic - Membrana líquida de poliuretano", url: "#" },
+      { nombre: "SikaFill - Impermeabilizante elástico", url: "#" },
+      { nombre: "SikaTop - Impermeabilizante cementoso", url: "#" },
+      { nombre: "Sika-1 - Impermeabilizante integral", url: "#" }
+    ]
+  },{
+    nombre: "Edil Colombia",
+    imagen: "./src/assets/EdilLogo.png",
+    descripcion: "Empresa colombiana que se dedica a la fabricación y venta de materiales para la impermeabilización.",
+    productos: [
+      { nombre: "Edil - Membrana asfáltica", url: "#" },
+      { nombre: "Edil - Membrana líquida de poliuretano", url: "#" },
+      { nombre: "Edil - Impermeabilizante acrílico", url: "#" },
+      { nombre: "Edil - Membrana de poliurea", url: "#" }
     ]
   },
   {
-    nombre: "Comex",
-    imagen: "./src/assets/comexLogo.png",
-    descripcion: "Marca mexicana con amplia gama de impermeabilizantes de alta calidad.",
+    nombre: "Texsa",
+    imagen: "./src/assets/texsaLogo.png",
+    descripcion: "Fabricante español de productos para la impermeabilización y aislamiento térmico.",
     productos: [
-      "Top Total - Impermeabilizante acrílico",
-      "Top Secado Rápido - Para climas lluviosos",
-      "Sellador Comex - Base para impermeabilizante",
-      "Impercomex - Prefabricado asfáltico"
+      { nombre: "TexsaPro - Membrana líquida de poliuretano", url: "https://texsa.com.co/dmdocuments/FTPCCW-525.pdf" },
+      { nombre: "TexsaFibra - Impermeabilizante acrílico", url: "https://texsa.com.co/wp-content/uploads/2023/07/IMPERTEXSA.pdf" },
+      { nombre: "TexsaTec - Membrana asfáltica", url: "#" },
+      { nombre: "TexsaPur - Impermeabilizante de poliuretano", url: "#" }
     ]
   },
   {
-    nombre: "Imperquimia",
-    imagen: "./src/assets/imperquimiaLogo.png",
-    descripcion: "Fabricante especializado en sistemas de impermeabilización y construcción.",
+    nombre: "Placco Impermeablizantes",
+    imagen: "./src/assets/placcoLogo.jpg",
+    descripcion: "Empresa argentina con más de 30 años de experiencia en la fabricación de impermeabilizantes.",
     productos: [
-      "Elaston - Impermeabilizante elastomérico",
-      "Urelastic - Impermeabilizante de poliuretano",
-      "Aquasil - Impermeabilizante de silicona",
-      "Impercoat - Membranas prefabricadas"
+      { nombre: "Placco - Membrana asfáltica", url: "#" },
+      { nombre: "Placco - Membrana líquida de poliuretano", url: "#" },
+      { nombre: "Placco - Impermeabilizante acrílico", url: "#" },
+      { nombre: "Placco - Membrana de poliurea", url: "#" }
     ]
   },{
     nombre: "Mapei",
     imagen: "./src/assets/mapeiLogo.png",
     descripcion: "Compañía italiana con soluciones avanzadas de impermeabilización.",
     productos: [
-      "Mapelastic - Membrana cementosa flexible",
-      "Aquaflex - Membrana líquida elástica",
-      "Idrosilex - Impermeabilizante por cristalización",
-      "Purtop - Membrana de poliurea"
+      { nombre: "Mapelastic - Membrana cementosa flexible", url: "#" },
+      { nombre: "Aquaflex - Membrana líquida elástica", url: "#" },
+      { nombre: "Idrosilex - Impermeabilizante por cristalización", url: "#" },
+      { nombre: "Purtop - Membrana de poliurea", url: "#" }
     ]
   }
 ];
 ---
 
-<section class="material material-section">
+<section class="Material" id="materiales">
   <div class="material intro">
     <h2>Las Mejores Marcas de Impermeabilizantes</h2>
     <p>La impermeabilización es esencial para proteger estructuras contra la humedad y el agua. Contar con los materiales adecuados garantiza durabilidad y eficacia en la protección de superficies. A continuación, presentamos las principales marcas en el mercado y sus productos más destacados.</p>
@@ -77,7 +87,7 @@ const marcasImpermeabilizantes = [
           <p class="material brand-description">{marca.descripcion}</p>
           <ul class="material product-list">
             {marca.productos.map(producto => (
-              <li>{producto}</li>
+              <li><a href={producto.url}>{producto.nombre}</a></li>
             ))}
           </ul>
           <a href="#" class="cta-button">Ver más detalles</a>
